@@ -1,0 +1,23 @@
+// 유데미 함수예제 중 내게 어려웠던 문제 (1) 
+
+// 함수를 이용해서 1부터 7까지의 숫자를 하나 입력했을 때 해당 요일이 반환되도록 하고 그 외 숫자가 입력되면 null을 반환하는 예제이다.
+
+return(1) // "Monday"
+return(2) // "Tuesday"
+return(3) // "Wednesday"
+return(0) // null
+
+일단 day 변수를 배열로 저장하여 그 배열 안에 월요일부터 일요일까지 넣었다.
+
+그 다음 returnDay 함수에 num이라는 인수를 넣었고, num이 1부터 7을 벗어나면 null을 출력하도록 하고, 그렇지 않으면 요일이 표시되도록 했다.
+
+코드 :
+const Day = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+function returnDay (num) { 
+    if (num < 1 || num > 7) {
+        return null;
+    } else {
+        return day[num-1];
+    }
+}
